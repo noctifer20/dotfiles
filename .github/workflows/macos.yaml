@@ -1,0 +1,12 @@
+name: macOS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ci:
+    runs-on: macos-latest
+    steps:
+      - run: curl -o- https://raw.githubusercontent.com/noctifer20/dotfiles/master/setup.sh | bash
